@@ -1,0 +1,27 @@
+# Borrowed from https://github.com/skeletonlabs/skeleton
+
+name: 🛠️ New Task to
+description: Let us know what you would like to see added.
+labels: ["type: task","AmharicAI-AdGen"]
+body:
+    - type: textarea
+      id: task_description
+      attributes:
+          label: Describe the task in detail, including its purpose, scope, and expected outcomes.
+      validations:
+        required: true
+    - type: dropdown
+      id: task_category
+      attributes:
+          label: What type of task is this?
+          options:
+              - "development"
+              - "testing"
+              - "Bug"
+              - "docs"
+              - "research"
+              - "other"
+    - type: textarea
+      id: references
+      attributes:
+          label: Provide relevant links or additional information.
