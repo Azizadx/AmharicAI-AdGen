@@ -161,3 +161,6 @@ cython_debug/
 
 .DS_Store/**/*
 
+##webapp and chatbot
+telegram/frontend/node_modules/
+telegram/chat-bot/bot_flask
