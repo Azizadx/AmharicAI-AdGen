@@ -159,8 +159,14 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+.DS_Store
+
+data/
+
+
 .DS_Store/**/*
 
 ##webapp and chatbot
 telegram/frontend/node_modules/
 telegram/chat-bot/bot_flask
+
