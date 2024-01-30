@@ -160,3 +160,15 @@ cython_debug/
 #.idea/
 telegram/chat-bot/bot_flask/
 telegram/frontend/node_modules
+
+.DS_Store
+
+data/
+
+
+.DS_Store/**/*
+
+##webapp and chatbot
+telegram/frontend/node_modules/
+telegram/chat-bot/bot_flask
+
