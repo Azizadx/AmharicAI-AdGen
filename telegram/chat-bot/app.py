@@ -1,11 +1,12 @@
-from config import TELEGRAM_TOKEN, WebApp_URL
+from config import TELEGRAM_TOKEN
+#  WebApp_URL
 
 import logging
 
 from telegram import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, WebAppInfo
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 
-url_web_app=WebApp_URL
+# url_web_app=WebApp_URL
 token=TELEGRAM_TOKEN
 # Enable logging
 logging.basicConfig(
@@ -25,11 +26,15 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         reply_markup=ReplyKeyboardMarkup.from_button(
             KeyboardButton(
                 text="Open AiQEM Web-App ",
-                web_app=WebAppInfo(url=url_web_app),
+                web_app=WebAppInfo(url="https://aqim-web-app.vercel.app"),
             )
         ),
     )
-
+# Define a `/stop` command handler. 
+def stop(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Stop the bot."""
+    update.message.reply_text('Bot stopped.')
+    context.application.stop()
 
 
 
@@ -39,6 +44,8 @@ def main() -> None:
     application = Application.builder().token(TELEGRAM_TOKEN).build()
 
     application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("stop", stop))
+
 
     # Run the bot until the user presses Ctrl-C
     application.run_polling(allowed_updates=Update.ALL_TYPES)
