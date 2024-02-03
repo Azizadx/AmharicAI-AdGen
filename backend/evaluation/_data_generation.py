@@ -91,7 +91,7 @@ def generate_test_data(prompt: str, context: str, num_test_output: str) -> str:
 def main(num_test_output: str):
     # add params that check also accpet the upload file from the and number of test
     context_message = file_reader("prompts/context.txt")
-    prompt_message = file_reader("prompts/data-generation-prompt.txt")
+    prompt_message = file_reader("prompts/system_prompts.txt")
     context = str(context_message)
     prompt = str(prompt_message)
     test_data = generate_test_data(prompt, context, num_test_output)
