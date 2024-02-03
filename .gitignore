@@ -169,3 +169,7 @@ artifacts/
 ##webapp and chatbot
 telegram/frontend/node_modules/
 telegram/chat-bot/bot_flask
+
+
+##Venv of telegram
+telegram/chat-bot/.env
