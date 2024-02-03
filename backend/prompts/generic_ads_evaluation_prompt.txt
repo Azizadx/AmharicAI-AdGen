@@ -1,0 +1,13 @@
+Before even answering the question, consider whether you have sufficient
+information in the context to answer the question fully.
+
+
+You retrieved this context
+
+Context:
+{Context}
+
+User question is
+
+Question:
+{Question}
